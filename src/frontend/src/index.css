@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm upscale Indian restaurant palette */
+    --background: 0.955 0.015 68; /* parchment/cream #F3E8D7 */
+    --foreground: 0.22 0.03 50; /* near-black brown #1F1A16 */
+    --card: 0.97 0.01 68; /* lighter cream card */
+    --card-foreground: 0.22 0.03 50;
+    --popover: 0.97 0.01 68;
+    --popover-foreground: 0.22 0.03 50;
+
+    /* Primary = deep chocolate brown */
+    --primary: 0.24 0.05 45; /* #3B241A */
+    --primary-foreground: 0.97 0.01 68;
+
+    /* Secondary = warm mahogany */
+    --secondary: 0.42 0.09 40; /* #7A3A24 */
+    --secondary-foreground: 0.97 0.01 68;
+
+    /* Muted = light beige */
+    --muted: 0.9 0.02 68;
+    --muted-foreground: 0.45 0.04 50;
+
+    /* Accent = muted gold */
+    --accent: 0.72 0.1 70; /* #C6A15A */
+    --accent-foreground: 0.18 0.03 50;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.84 0.025 68; /* light gray-beige */
+    --input: 0.84 0.025 68;
+    --ring: 0.72 0.1 70; /* gold ring */
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.24 0.05 45;
+    --sidebar-foreground: 0.97 0.01 68;
+    --sidebar-primary: 0.72 0.1 70;
+    --sidebar-primary-foreground: 0.18 0.03 50;
+    --sidebar-accent: 0.32 0.06 45;
+    --sidebar-accent-foreground: 0.97 0.01 68;
+    --sidebar-border: 0.32 0.06 45;
+    --sidebar-ring: 0.72 0.1 70;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .text-gold {
+    color: oklch(var(--accent));
+  }
+
+  .bg-gold {
+    background-color: oklch(var(--accent));
+  }
+
+  .bg-primary-dark {
+    background-color: oklch(0.2 0.05 45);
+  }
+
+  .bg-footer {
+    background-color: oklch(0.3 0.07 38);
+  }
+
+  .section-cream {
+    background-color: oklch(0.955 0.015 68);
+  }
+}
